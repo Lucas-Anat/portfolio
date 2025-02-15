@@ -2,6 +2,7 @@
 *{ /* seletor */
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* remove valores não nec */
 }
 
 body {
@@ -24,8 +25,33 @@ i {
     width: 100%;
     padding: 8px 16px;
     z-index:2;
-
-
-    
+    background: #a0a0a022;    
 }
 
+/* li */
+.menu{
+    display: flex;/* torna o elemento um flex container  */
+    align-items: center;
+    background: #222;
+    gap: 10px;
+    list-style: none;
+
+}
+.menu-item{ /* Lista = Li */
+    width: 100%;
+
+
+}
+
+.menu-link{ /* span */
+    display: flex;
+    text-decoration: none;
+    color: rgb(194, 194, 168);
+
+}
+
+.menu-texto{
+    font-size: 20px;
+    text-transform: uppercase;
+
+}

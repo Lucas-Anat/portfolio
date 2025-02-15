@@ -2,6 +2,7 @@
 :root,
 :root[data-theme="dark"] {
     
+    --color-menu: #6464;
     --bg-body: #000;
     --cor-texto: #fff;
     --bg-header: #000 ;
@@ -11,6 +12,7 @@
 /* Defenir cores tema ligth */
 :root[data-theme="light"] {
     
+    --color-menu: #6464;
     --bg-body: #fff;
     --cor-texto: #000;
     --bg-header: #fff;
@@ -36,7 +38,7 @@ body {
 }
 
 i {
-    color: #ffffff;
+    color: var(--icone-tema)/* #ffffff */;
     font-size: 15px;
     /* tamanho do texto */
 
@@ -52,7 +54,7 @@ i {
     width: 100%;
     padding: 8px 16px;
     z-index: 2;
-    background: #222;
+    background: var(--bg-header);
 }
 
 /* li */
@@ -60,7 +62,7 @@ i {
     display: flex;
     /* torna o elemento um flex container  */
     align-items: center;
-    background: #222;
+    background: var(--bg-header);
     gap: 25px;
     list-style: none;
 }
@@ -146,6 +148,7 @@ icone = icone do bootstrap <i> */
     display: flex;
     flex-direction: column;
     gap: 25px;
+    
 
 
 }
@@ -153,6 +156,7 @@ icone = icone do bootstrap <i> */
 /*  ATUALIZAÇOES FUTURAS */
 #home {
     padding: 32px 16px;
+    
 
 }
 
@@ -163,7 +167,7 @@ icone = icone do bootstrap <i> */
         position: fixed;
         border-bottom: 1px solid #faf3f3;
         padding: 16px 80px;
-        background: #222;
+        background: var(--bg-header);
     }
 
     .nav-mobile {

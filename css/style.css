@@ -24,7 +24,7 @@ i {
     align-items: center;
     width: 100%;
     padding: 8px 16px; 
-    z-index:2;
+    z-index: 2;
      background: #222;    
 }
 
@@ -99,12 +99,29 @@ icone = icone do bootstrap <i> */
     display: none;
 }
 
+/* Home */
+#home{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;  
+
+
+}
+
+/*  ATUALIZAÇOES FUTURAS */
+#home{
+    padding: 32px 16px;
+
+}
+
 /* CSS RESPONSIVO */
 
 @media (min-width: 768px){
     #header {
         position: fixed;
         border-bottom: 1px solid #faf3f3;
+        padding: 16px 80px ;
+        background: #222;
     }
     .nav-mobile{
         display: none;
@@ -113,7 +130,24 @@ icone = icone do bootstrap <i> */
     .header-nav {
         display: flex;
     }
-    
+    #home{
+        padding: 128px 96px 64px 96px; 
+    }  
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
 }
 
+/* 1200px */
+
+@media (min-width: 1200px){
+    #home {
+        padding: 160px 96px 32px;
+    }
+}
+
+/* @media (min-width: 1400px) */
 

@@ -33,10 +33,19 @@ i {
     display: flex;/* torna o elemento um flex container  */
     align-items: center;
     background: #222;
-    gap: 10px;
+    gap: 25px;
     list-style: none;
-
 }
+.menu-mobile { /* nav */
+    width: 100vw;/* viewport width */
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    border-top: 1px solid #faf3f3;
+}
+
+
+
 .menu-item{ /* Lista = Li */
     width: 100%;
 
@@ -87,7 +96,7 @@ icone = icone do bootstrap <i> */
 }
 
 .header-nav {
-    display: flex;
+    display: none;
 }
 
 /* CSS RESPONSIVO */
@@ -97,6 +106,14 @@ icone = icone do bootstrap <i> */
         position: fixed;
         border-bottom: 1px solid #faf3f3;
     }
+    .nav-mobile{
+        display: none;
+
+    }
+    .header-nav {
+        display: flex;
+    }
+    
 }
 
 

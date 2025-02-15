@@ -13,7 +13,7 @@ body {
 
 i {
     color: #ffffff;
-    font-size: 25px;/* tamanho do texto */
+    font-size: 15px;/* tamanho do texto */
 
 }
 
@@ -23,9 +23,9 @@ i {
     justify-content: space-between; /* separa o espaço por igual */
     align-items: center;
     width: 100%;
-    padding: 8px 16px;
+    padding: 8px 16px; 
     z-index:2;
-    background: #a0a0a022;    
+     background: #222;    
 }
 
 /* li */
@@ -55,3 +55,48 @@ i {
     text-transform: uppercase;
 
 }
+
+.menu-mobile .menu-link{
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 15px;
+
+}
+
+/* menu texto = span <span>
+icone = icone do bootstrap <i> */
+.menu-link.active .menu-icone,
+.menu-link.active .menu-texto,
+.menu-link:hover .menu-icone,
+.menu-link:hover .menu-texto{
+    color: #faf3f3;
+}
+/* nao selecionados */
+.menu-icone,
+.menu-texto{
+    color: #646464;
+    
+}
+
+.menu-icone{
+    font-size: 23px;
+}
+
+.menu-principal {
+    gap: 20px;
+}
+
+.header-nav {
+    display: flex;
+}
+
+/* CSS RESPONSIVO */
+
+@media (min-width: 768px){
+    #header {
+        position: fixed;
+        border-bottom: 1px solid #faf3f3;
+    }
+}
+
+

@@ -1,26 +1,40 @@
 /* google font */
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Monomakh&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 /* Defenir cores tema Dark */
 :root,
 :root[data-theme="dark"] {
-    
+
     --color-menu: #6464;
     --bg-body: #000;
     --cor-texto: #fff;
-    --bg-header: #000 ;
-    --icone-tema: #fff ;
+    --bg-header: #000;
+    --icone-tema: #fff;
+
+    --cor-txt-menu: #fff;
+    --txt-menu-hover: rgb(194, 194, 168);
+
+    --cor-border-mobile: #fff;
+
+    --btn: #fff
 }
 
 /* Defenir cores tema ligth */
 :root[data-theme="light"] {
-    
+
     --color-menu: #6464;
     --bg-body: #fff;
     --cor-texto: #000;
     --bg-header: #fff;
-    --icone-tema:#000 ;
+    --icone-tema: #000;
+
+    --cor-txt-menu: #000;
+    --txt-menu-hover: rgb(194, 194, 168);
+
+    --cor-border-mobile: #000;
+
+    --btn: #000
 }
 
 
@@ -33,6 +47,11 @@
     /* remove valores não nec */
 }
 
+html[data-theme='dark'] .logo {
+    filter: invert(1);
+
+}
+
 body {
     background: var(--bg-body);
     /* cor de fundo */
@@ -41,12 +60,33 @@ body {
     font-family: "Rubik", serif;
 
 }
-.h1{
+
+b {
+
+    font-style: oblique;
+}
+
+h1 {
     font-size: 60px;
+    font-family: "Atkinson Hyperlegible Next";
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+h3 {
+
+    font-family: "Atkinson Hyperlegible Next";
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
 }
 
 i {
-    color: var(--icone-tema)/* #ffffff */;
+    color: var(--icone-tema)
+        /* #ffffff */
+    ;
     font-size: 15px;
     /* tamanho do texto */
 
@@ -65,12 +105,16 @@ i {
     background: var(--bg-header);
 }
 
+.header-logo .logo {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
 /* li */
 .menu {
     display: flex;
     /* torna o elemento um flex container  */
     align-items: center;
-    background: var(--bg-header);
     gap: 25px;
     list-style: none;
 }
@@ -82,7 +126,7 @@ i {
     position: fixed;
     bottom: 0;
     justify-content: space-between;
-    border-top: 1px solid #faf3f3;
+    border-top: 1px solid var(--cor-border-mobile);
 }
 
 
@@ -99,6 +143,7 @@ i {
     display: flex;
     text-decoration: none;
     color: rgb(194, 194, 168);
+
 
 }
 
@@ -121,13 +166,13 @@ icone = icone do bootstrap <i> */
 .menu-link.active .menu-texto,
 .menu-link:hover .menu-icone,
 .menu-link:hover .menu-texto {
-    color: #faf3f3;
+    color: var(--txt-menu-hover);
 }
 
 /* nao selecionados */
 .menu-icone,
 .menu-texto {
-    color: #646464;
+    color: var(--cor-txt-menu);
 
 }
 
@@ -156,7 +201,7 @@ icone = icone do bootstrap <i> */
     display: flex;
     flex-direction: column;
     gap: 25px;
-    
+
 
 
 }
@@ -164,9 +209,52 @@ icone = icone do bootstrap <i> */
 /*  ATUALIZAÇOES FUTURAS */
 #home {
     padding: 32px 16px;
-    
+
 
 }
+
+/* btn */
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 2px 10px;
+    cursor: pointer;
+    color: var(--btn);
+
+}
+
+.btn-primary {
+    border: 1px solid var(--btn);
+}
+
+.btn span {
+    color: var(--btn);
+    font-size: 20px;
+}
+
+.btn i {
+    font-size: 18px;
+}
+
+.btn:hover{
+    transform: scale(1.02);
+    transition: ease-in-out .4s;
+}
+
+.btn:hover span{
+    color: var(--txt-menu-hover);
+}
+
+a {
+    text-decoration: none;
+}
+
 
 /* CSS RESPONSIVO */
 

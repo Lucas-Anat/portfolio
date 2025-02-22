@@ -399,6 +399,13 @@ a {
         flex-direction: row;
     }
 
+    .projeto-card.card-reverse {
+
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+    }
+
     .card-img {
         width: 35%;
     }

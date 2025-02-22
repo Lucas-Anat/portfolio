@@ -17,7 +17,11 @@
 
     --cor-border-mobile: #fff;
 
-    --btn: #fff
+    --btn: #fff;
+
+    --box-shadow: #fff;
+
+    --seta: #fff;
 }
 
 /* Defenir cores tema ligth */
@@ -34,7 +38,12 @@
 
     --cor-border-mobile: #000;
 
-    --btn: #000
+    --btn: #000;
+
+    --box-shadow: #000;
+
+    
+    --seta: #000;
 }
 
 
@@ -50,6 +59,10 @@
 html[data-theme='dark'] .logo {
     filter: invert(1);
 
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -72,6 +85,14 @@ h1 {
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Monomakh";
+    text-align: center;
 }
 
 h3 {
@@ -207,11 +228,91 @@ icone = icone do bootstrap <i> */
 }
 
 /*  ATUALIZAÇOES FUTURAS */
-#home {
+#home,
+.projetos,
+.sobre,
+.contato {
     padding: 32px 16px;
 
 
 }
+
+/* projetos */
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-transform: uppercase;
+}
+
+.projeto-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.card-img {
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px var(--box-shadow);
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+
+}
+
+/* titulo h3 */
+.card-title {
+    font-family:"Atkinson Hyperlegible Next";;
+    font-size: 25px;
+    font-weight: 600;
+
+}
+
+.card-description{
+    font-family: "Atkinson Hyperlegible Next";
+    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-weight: lighter;
+
+}
+
+.card-list{
+    list-style: none;
+    font-family: "Atkinson Hyperlegible Next";
+    margin-left: 15px;
+
+
+}
+
+.iten-seta{
+    color: var(--seta);
+    font-size: 14px;
+}
+
+/* li */
+.card-item {
+    margin-left: 18px;
+    margin-bottom: 5px;
+}
+    
+    
 
 /* btn */
 .btn {
@@ -242,17 +343,22 @@ icone = icone do bootstrap <i> */
     font-size: 18px;
 }
 
-.btn:hover{
+.btn:hover {
     transform: scale(1.02);
     transition: ease-in-out .4s;
 }
 
-.btn:hover span{
+.btn:hover span {
     color: var(--txt-menu-hover);
 }
 
 a {
     text-decoration: none;
+}
+
+.video iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
 }
 
 
@@ -285,6 +391,17 @@ a {
         align-items: flex-start;
     }
 
+}
+
+/* 992px */
+@media (min-width: 992px) {
+    .projeto-card {
+        flex-direction: row;
+    }
+
+    .card-img {
+        width: 35%;
+    }
 }
 
 /* 1200px */

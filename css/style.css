@@ -22,6 +22,8 @@
     --box-shadow: #fff;
 
     --seta: #fff;
+
+    --accordion: #726868;
 }
 
 /* Defenir cores tema ligth */
@@ -42,8 +44,10 @@
 
     --box-shadow: #000;
 
-    
+
     --seta: #000;
+
+    --accordion: #9b9b9b;
 }
 
 
@@ -101,7 +105,21 @@ h3 {
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+    text-align: left;
 
+}
+
+h4{
+    font-size: 20px;
+    font-family: "Atkinson Hyperlegible Next";
+    font-weight: 300;
+    text-align: left;   
+}
+p, span, li{
+    font-size: 18px;
+}
+p{
+    text-align: justify;
 }
 
 i {
@@ -148,6 +166,7 @@ i {
     bottom: 0;
     justify-content: space-between;
     border-top: 1px solid var(--cor-border-mobile);
+    background-color: var(--bg-body);
 }
 
 
@@ -164,6 +183,8 @@ i {
     display: flex;
     text-decoration: none;
     color: rgb(194, 194, 168);
+    gap: 5px;
+    align-items: center;
 
 
 }
@@ -277,13 +298,14 @@ icone = icone do bootstrap <i> */
 
 /* titulo h3 */
 .card-title {
-    font-family:"Atkinson Hyperlegible Next";;
+    font-family: "Atkinson Hyperlegible Next";
+    ;
     font-size: 25px;
     font-weight: 600;
 
 }
 
-.card-description{
+.card-description {
     font-family: "Atkinson Hyperlegible Next";
     font-size: 18px;
     font-optical-sizing: auto;
@@ -293,7 +315,7 @@ icone = icone do bootstrap <i> */
 
 }
 
-.card-list{
+.card-list {
     list-style: none;
     font-family: "Atkinson Hyperlegible Next";
     margin-left: 15px;
@@ -301,7 +323,7 @@ icone = icone do bootstrap <i> */
 
 }
 
-.iten-seta{
+.iten-seta {
     color: var(--seta);
     font-size: 14px;
 }
@@ -311,16 +333,16 @@ icone = icone do bootstrap <i> */
     margin-left: 18px;
     margin-bottom: 5px;
 }
-    
+
 /* sobre */
-.sobre{
+.sobre {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
 .sobre-content1,
-.sobre-content2{
+.sobre-content2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -328,7 +350,7 @@ icone = icone do bootstrap <i> */
     gap: 32px;
 }
 
-.sobre-perfil{
+.sobre-perfil {
     width: 100%;
     pointer-events: none;
     border-radius: 50%;
@@ -338,14 +360,44 @@ icone = icone do bootstrap <i> */
 
 }
 
-.sobre-descricao{
+.sobre-descricao {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 20px;
 }
 
-    
+.sobre-skills,
+.sobre-icones {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.sobre-skills i,
+.sobre-icones i {
+    font-size: 20px;
+    color: var(--btn);
+}
+
+.sobre-content2 .col1,
+.sobre-content2 .col2 {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 32px;
+}
+
+.sobre-content2 .col1 .row1 .sobre-content2 .col2 .row2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
 
 /* btn */
 .btn {
@@ -393,6 +445,62 @@ a {
     width: 100%;
     aspect-ratio: 16/9;
 }
+
+/* accortdions  */
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    padding: 8px 16px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--cor-border-mobile);
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+
+}
+
+.accordion-header span {
+    color: var(--cor-texto);
+    text-transform: uppercase;
+
+}
+
+.accordion-body {
+    display: none;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border: 1px solid var(--cor-border-mobile);
+}
+
+.accordion-item.active .accordion-header {
+    background: var(--accordion);
+}
+
+.accordion-item.active .accordion-body {
+    display: flex;
+}
+
+.accordion-item.active .bi-caret-down-fill {
+    transform: rotate(180deg);
+}
+
+.accordion-header.start{
+    border-radius: 5px 5px 5px 5px;
+}
+
+.accordion-header.end,
+.accordion-item.active .accordion-body.end {
+    border-radius: 5px 5px 5px 5px;
+}
+
+
+
+
 
 
 /* CSS RESPONSIVO */
@@ -442,6 +550,15 @@ a {
     .card-img {
         width: 35%;
     }
+
+    .sobre-content1,
+    .sobre-content2 {
+        display: grid;
+        grid-template-columns: 35% 50%;
+        justify-content: flex-start;
+        gap: 64px;
+
+    }
 }
 
 /* 1200px */
@@ -450,6 +567,10 @@ a {
     #home {
         padding: 160px 96px 32px;
     }
+
+    /*  .descricao-button .btn{
+        width: auto;
+    } */
 }
 
 /* @media (min-width: 1400px) */

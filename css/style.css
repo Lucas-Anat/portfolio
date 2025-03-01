@@ -312,6 +312,39 @@ icone = icone do bootstrap <i> */
     margin-bottom: 5px;
 }
     
+/* sobre */
+.sobre{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sobre-content1,
+.sobre-content2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 32px;
+}
+
+.sobre-perfil{
+    width: 100%;
+    pointer-events: none;
+    border-radius: 50%;
+    border: 2px solid var(--btn);
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.sobre-descricao{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
     
 
 /* btn */

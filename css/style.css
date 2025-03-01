@@ -522,7 +522,9 @@ a {
         display: flex;
     }
 
-    #home {
+    #home,
+    .projetos,
+    .sobre {
         padding: 128px 96px 64px 96px;
     }
 
@@ -551,6 +553,19 @@ a {
         width: 35%;
     }
 
+    .sobre{
+
+        gap: 10px;
+    }
+
+    .sobre-descricao,
+    h2{
+        text-align: left;
+    }
+
+
+
+
     .sobre-content1,
     .sobre-content2 {
         display: grid;
@@ -568,9 +583,37 @@ a {
         padding: 160px 96px 32px;
     }
 
+    h2{
+        font-size: 65px;
+    }
+    h3{
+        font-size: 45px;
+    }
+     
+    p, span, li{
+        font-size: 20px;
+    }
+
     /*  .descricao-button .btn{
         width: auto;
     } */
 }
-
 /* @media (min-width: 1400px) */
+@media (min-width: 1400px){
+    h1{
+        font-size: 90px;
+    }
+
+    h2{
+        font-size: 70px;
+    }
+    h3{
+        font-size: 50px;
+    }
+    .projetos,
+    .sobre{
+        padding: 160px 240px 64px;
+    }
+}
+
+
